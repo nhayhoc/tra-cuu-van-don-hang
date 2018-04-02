@@ -16,7 +16,7 @@ export class Result extends Component {
       var result = this.props.dataJson;
       var listResult = result.map((item,i)=>
 
-        <tr class={i==0 ? 'last':''} key={i}>
+        <tr class={i===0 ? 'last':''} key={i}>
           <td class="row1" >
               <span class="day">{item.time.split(' ')[0]}</span>
               <span class="time">{item.time.split(' ')[1].substring(0,item.time.split(' ')[1].lastIndexOf(':'))}</span>

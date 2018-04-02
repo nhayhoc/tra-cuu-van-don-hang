@@ -36,12 +36,12 @@ export class Input extends Component {
   render() {
     let loading = this.props.loading;
     let com_code = "https://cdn.kuaidi100.com/images/all/56/"+this.props.com_code+".png";
-    if (loading==0){
+    if (loading===0){
       var res = <img class="loading " id="com-loading" src="/img/loading.gif" title="Đang lấy thông tin" alt="Đang lấy thông tin" />;
-    } else if (loading==1){
+    } else if (loading===1){
       var res = <img class="icon-com" id="com-unknown" src="/img/kygui100-logo-square.png" title="Không thể xác định được hãng vận chuyển" alt="Không thể xác định được hãng vận chuyển" />;
     } else {
-      var res = <img class="icon-com " id="com-loaded" src={com_code} />;
+      var res = <img class="icon-com " id="com-loaded" src={com_code} alt=""/>;
     }
     return (
 

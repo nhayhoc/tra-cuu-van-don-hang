@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Input} from './components/Input';
 import {Result} from './components/Result';
@@ -20,6 +19,14 @@ class App extends Component {
     this.onChange = this.onChange.bind(this);
     this.onClick = this.onClick.bind(this);
     this.hideResult = this.hideResult.bind(this);
+  }
+  init(){
+    this.setState({
+      loading : 1,
+      isFound: false,
+      showResult: false,
+      dataJson : []
+    });
   }
 
   onChange(textInput){
@@ -46,7 +53,7 @@ class App extends Component {
     fetch(APIUrl)
       .then(response => response.json())
       .then(data => {
-        if(data.data.result != false ){
+        if(data.data.result !== false ){
           this.setState({
             dataJson: data.data.data,
             loading: 2,
@@ -61,17 +68,6 @@ class App extends Component {
 
   }
 
-  init(){
-    this.setState({
-
-      inputText : '',
-      loading : 1,
-      icon_com: '',
-      isFound: false,
-      showResult: false,
-      dataJson : []
-    });
-  }
 
   hideResult(){
     this.init();
