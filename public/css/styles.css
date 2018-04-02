@@ -1,0 +1,184 @@
+/********Home Page*********/
+header.nav-main {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.divH20 {
+    height: 20px;
+}
+
+.divH50 {
+    height: 50px;
+}
+
+.divH100 {
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .intro {
+        justify-content: center;
+    }
+}
+
+.intro {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/intro-bg.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.intro h3, .intro h4 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+.search-box {
+    width: 100%;
+    margin-left: unset !important;
+    border: 1px solid #ff9800;
+    padding: 0 !important;
+    height: 4rem;
+    position: relative;
+}
+
+.search-box form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.search-box .input-text {
+    height: 99%;
+    flex: 1 0 10rem;
+    font-size: 1.5rem;
+    padding-left: 1rem ;
+    border: 1px solid #ff9800;
+}
+
+.search-box .btn-search {
+    height: 100%;
+    flex: 0 0 auto;
+}
+
+.search-box .express-company-logo {
+    width: 4rem;
+    height: 100%;
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-com {
+    width: 100%;
+    height: 100%;
+}
+
+.search-box-progress {
+    margin-left: unset !important;
+    padding: 0 !important;
+}
+.search-box-progress .progress {
+    margin: 0 !important;
+}
+
+.search-box-result {
+    display: block;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: auto;
+}
+
+/*Table Waybill search result*/
+.query-box, .result-info {
+    float: none;
+}
+
+.result-info {
+    width: 100%;
+    float: left;
+}
+
+.result-info .last td, .result-info .last td a {
+    color: #ff9800;
+    border-bottom: none;
+}
+
+.result-info .row1 {
+    width: 105px;
+    text-align: center;
+    padding-left: 14px;
+    padding-right: 0;
+}
+
+.result-info td {
+    padding: 7px;
+    color: #828282;
+}
+
+.day {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.time {
+    font-size: 1.2rem;
+}
+
+.result-info .last td, .result-info .last td a {
+    color: #ff7800;
+    border-bottom: none;
+}
+
+.result-info .status-check {
+    width: 44px;
+    background: url('../img/spider_search_v4.png') 10px -717px no-repeat;
+}
+
+.result-info td {
+    padding: 7px;
+    color: #828282;
+}
+
+.result-info-down .status {
+    width: 44px;
+    background: url('../img/spider_search_v4.png') -30px -764px no-repeat;
+}
+
+.status .col2 {
+    position: relative;
+    z-index: -1;
+}
+
+.status .line1 {
+    position: absolute;
+    left: 6.4px;
+    width: 0.57em;
+    height: 5em;
+    border-right: 1px solid #d2d2d2;
+    top: -5px;
+    z-index: -1;
+}
+
+#btn-close-result {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
